@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "S13 — Car Detailing in Vinnytsia: Cleaning, Polishing, Ceramic",
+    "description": "S13 Detailing Studio in Vinnytsia: interior deep cleaning, paint polishing, ceramic protection. Fair prices, professional materials, warranty on all work. ☎ +38 (063) 806 50 56"
+  },
+  "nav": {
+    "services": "Services",
+    "results": "Results",
+    "process": "How we work",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Detailing studio in Vinnytsia",
+    "h1a": "Your car deserves that",
+    "h1b": "showroom look",
+    "sub": "Interior deep cleaning, paint polishing and ceramic protection. Fair prices, professional materials, warranty on all work.",
+    "ctaCall": "Call us",
+    "ctaForm": "Get a quote",
+    "statCars": "cars detailed",
+    "statRating": "Google rating",
+    "statQuality": "quality guarantee",
+    "photoAlt": "Car after detailing at S13 studio in Vinnytsia"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Three directions. One result — a flawless car",
+    "sub": "Every service includes the full work cycle. Expand the full price list to see all 22 items.",
+    "from": "from",
+    "to": "to",
+    "uah": "UAH",
+    "negotiable": "By arrangement",
+    "cta": "Get the price",
+    "fullPrice": "Full price list",
+    "groups": {
+      "cleaning": {
+        "title": "Interior cleaning",
+        "features": ["Seats, headliner, carpet", "With or without disassembly", "Ozonation and conditioners", "Child seat cleaning"]
+      },
+      "polishing": {
+        "title": "Polishing",
+        "features": ["1-step — up to 50% of scratches", "3-step — up to 80% of scratches", "Deep — 90%+ of scratches", "Headlight polishing and sanding"]
+      },
+      "protection": {
+        "title": "Paint protection",
+        "features": ["Ceramic coating", "Hard wax", "Rain repellent", "Leather and plastic protection"]
+      },
+      "extra": {
+        "title": "Additional services",
+        "features": ["Car pickup & drop-off"]
+      }
+    },
+    "items": {
+      "cleaning-basic": "Interior cleaning without disassembly",
+      "cleaning-full": "Interior cleaning with disassembly",
+      "ozonation": "Car ozonation",
+      "child-seat": "Child seat cleaning",
+      "conservants": "Leather and plastic conditioners",
+      "wool-removal": "Pet hair removal",
+      "three-phase-wash": "Three-phase wash",
+      "light-cleaning": "Light interior cleaning",
+      "seat-cleaning": "Seat cleaning",
+      "polish-1step": "1-step polishing (up to 50% of scratches)",
+      "polish-3step": "3-step polishing (up to 80% of scratches)",
+      "polish-deep": "Deep polishing (90%+ of scratches)",
+      "polish-partial": "Spot polishing (local defects)",
+      "headlights-polish": "Headlight polishing",
+      "headlights-grind": "Headlight sanding",
+      "wax": "Hard wax",
+      "ceramic": "Ceramic coating",
+      "antirain": "Rain repellent",
+      "quick-ceramic": "Express ceramic coating",
+      "bitumen-removal": "Bitumen removal",
+      "metal-removal": "Metal particle removal",
+      "car-pickup": "Car pickup & drop-off"
+    }
+  },
+  "beforeAfter": {
+    "label": "Before / After",
+    "title": "Results you can see instantly",
+    "sub": "Drag the slider to compare the state before and after our work.",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "sliderAria": "Before and after photo comparison, drag or use arrow keys"
+  },
+  "process": {
+    "label": "Process",
+    "title": "How we work",
+    "sub": "A transparent process with no surprises — from the first call to handover.",
+    "steps": [
+      { "title": "Request", "text": "Call us or leave a request — we agree on the service and time." },
+      { "title": "Inspection", "text": "We inspect the car, document its condition and give you the exact price upfront." },
+      { "title": "Work", "text": "We do the job with professional materials and send you photos of the process." },
+      { "title": "Handover", "text": "You accept the result in person. We provide a warranty and care recommendations." }
+    ]
+  },
+  "why": {
+    "label": "Why S13",
+    "title": "Fair price. Results without compromise",
+    "sub": "We work with professional materials, give a warranty on every service and show you the process — no need to take our word for it.",
+    "statCars": "cars detailed",
+    "statYears": "years of experience",
+    "statServices": "services on the list",
+    "cta": "Book a detailing"
+  },
+  "warranty": {
+    "label": "Warranty",
+    "title": "Warranty on work and professional materials",
+    "text": "Every service comes with a warranty. We use professional chemistry and equipment from proven brands — the same products used by leading European studios.",
+    "points": ["Warranty on every service", "Fixed price after inspection", "Photo report of the process"],
+    "materialsLabel": "Materials we work with"
+  },
+  "gallery": {
+    "label": "Gallery",
+    "title": "Our work",
+    "sub": "Photos from real orders at the studio.",
+    "lightboxClose": "Close",
+    "lightboxPrev": "Previous photo",
+    "lightboxNext": "Next photo",
+    "items": [
+      "Paint polishing",
+      "Interior cleaning",
+      "Ceramic coating",
+      "Headlight polishing",
+      "Seat cleaning",
+      "Wax protection"
+    ]
+  },
+  "reviews": {
+    "label": "Reviews",
+    "title": "What clients say",
+    "sub": "Reviews from Google Maps and Instagram.",
+    "googleLink": "All reviews on Google",
+    "items": [
+      { "name": "Denys Shumlianskyi", "text": "The best experience of my life! Absolutely thrilled! If you love your car as much as I do and are looking for uncompromising quality — this is definitely the place.", "url": "https://www.google.com/maps/contrib/113857465093460296375/place/ChIJdWhF4YVbLUcR2Jc_FhePFAM/@49.2045062,28.4953615,17z/data=!4m6!1m5!8m4!1e1!2s113857465093460296375!3m1!1e1?hl=uk&entry=ttu&g_ep=EgoyMDI2MDcxMy4wIKXMDSoASAFQAw%3D%3D", "avatar": "" },
+      { "name": "Oleksandra Kravchuk", "text": "Everyone knows how much I value good service — special thanks for picking up the car and bringing it back. You've gained a loyal, happy client 🔥", "url": "https://www.instagram.com/reels/DYbkm5eiVxi/", "avatar": "/avatars/oleksandra.jpg" },
+      { "name": "Nataliia", "text": "Beautiful work. The car shines. Thank you. Recommended 🔥", "url": "https://www.instagram.com/p/DX_TWRGNMvP/", "avatar": "/avatars/nataliia.jpg" },
+      { "name": "Vadym Kolivoshko", "text": "Thanks for the work, everything done at the highest level. Highly recommend!!!", "url": "https://www.instagram.com/reels/DYPQ1BotrJt/", "avatar": "/avatars/vadym.jpg" }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      { "q": "How long does interior cleaning take?", "a": "Without disassembly — 1 day depending on condition. With disassembly — up to 2 days including full drying." },
+      { "q": "Do I need to book in advance?", "a": "Yes, usually 1–2 days ahead. Call us and we'll find a convenient slot. You can also fill in the form and we'll call you back ourselves." },
+      { "q": "What does the price depend on?", "a": "On the car's configuration and condition. We give the exact price after an initial inspection at the studio — it's fixed before work starts and never changes." },
+      { "q": "How long does ceramic coating last?", "a": "With proper care, a ceramic coating can last around 2 years or more. Once the service is complete, we provide recommendations on aftercare and help you choose the right chemistry for maintaining your car after the ceramic coating is applied." },
+      { "q": "What percentage of scratches does polishing remove?", "a": "1-step — up to 50%, 3-step — up to 80%, deep rotary polishing — 90% and more. We'll be able to give an exact estimate after inspecting the paintwork." },
+      { "q": "Can I leave the car for the whole day?", "a": "Yes, we can arrange drop-off and pick-up at a time that suits you. Our studio is open Monday to Saturday, 09:00–18:00." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Book a detailing",
+    "sub": "Call us or leave your number — we'll call back within 15 minutes during working hours.",
+    "addressLabel": "Address",
+    "hoursLabel": "Hours",
+    "hoursValue": "Mon–Sat: 09:00–18:00, Sun: closed",
+    "phoneLabel": "Phone",
+    "instagramLabel": "Instagram",
+    "form": {
+      "name": "Your name",
+      "phone": "+38 (0__) ___ __ __",
+      "service": "Service (optional)",
+      "submit": "Request a call",
+      "consent": "By submitting the form you agree to the processing of personal data",
+      "success": "Thank you! We'll call back within 15 minutes during working hours.",
+      "error": "Failed to send. Please call us:",
+      "nameError": "Enter your name (at least 2 characters)",
+      "phoneError": "Enter a valid phone number"
+    },
+    "mapTitle": "S13 Detailing Studio on the map"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeIn": "Vinnytsia, Ukraine"
+  },
+  "callbar": {
+    "call": "Call us"
+  },
+  "langSwitch": "Перейти на українську"
+}

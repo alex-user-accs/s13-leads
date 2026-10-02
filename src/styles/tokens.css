@@ -1,0 +1,32 @@
+:root {
+  --bg: #0b0b0c;
+  --panel: #141416;
+  --card: #1a1a1d;
+  --border: #26262a;
+  --accent: #e3d200;
+  --accent-dim: #b8aa00;
+  --text: #f4f4f2;
+  --muted: #9b9ca0;
+  --grey: #77787b;
+
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-pill: 100px;
+
+  --container: 1180px;
+  --pad-x: 24px;
+  --section-y: 88px;
+
+  --z-header: 100;
+  --z-callbar: 120;
+  --z-lightbox: 200;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (max-width: 599px) {
+  :root {
+    --pad-x: 16px;
+    --section-y: 64px;
+  }
+}

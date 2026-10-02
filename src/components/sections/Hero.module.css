@@ -1,0 +1,147 @@
+.hero {
+  padding: 150px 0 90px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.badge:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.badgePin {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.h1 {
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.h1 span {
+  color: var(--accent);
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 22px 0 34px;
+  max-width: 480px;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  max-width: 100%;
+  gap: 14px;
+}
+
+.cta :global(.btn) {
+  width: 100%;
+}
+
+@media (max-width: 599px) {
+  .cta {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+}
+
+.trust {
+  display: flex;
+  gap: 32px;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+
+.trust strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.trust span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.photo {
+  aspect-ratio: 4 / 4.6;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #1c1c1f 0%, #131315 100%);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.photoImg {
+  object-fit: cover;
+}
+
+@media (max-width: 899px) {
+  .hero {
+    padding: 116px 0 64px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .photo {
+    aspect-ratio: 16 / 10;
+  }
+  .grid {
+    gap: 0;
+  }
+  .content {
+    display: contents;
+  }
+  .badge {
+    order: 1;
+    width: fit-content;
+  }
+  .h1 {
+    order: 2;
+  }
+  .sub {
+    order: 3;
+    margin: 22px 0 0;
+  }
+  .cta {
+    order: 4;
+    margin-top: 30px;
+  }
+  .trust {
+    order: 5;
+    margin-top: 34px;
+  }
+  .photo {
+    order: 6;
+    margin-top: 32px;
+  }
+}

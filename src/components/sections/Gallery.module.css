@@ -1,0 +1,112 @@
+.section {
+  background-color: var(--panel);
+  background-image: radial-gradient(700px 350px at 78% 24%, rgba(227, 210, 0, 0.07), transparent 70%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tile {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease),
+    opacity 0.7s var(--ease);
+}
+
+@media (hover: hover) {
+  .tile:hover {
+    transform: translateY(-4px);
+    border-color: rgba(227, 210, 0, 0.45);
+  }
+}
+
+.img {
+  object-fit: cover;
+}
+
+.tile,
+.lightboxImg {
+  background: #17171a;
+}
+
+.caption {
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-lightbox);
+  background: rgba(5, 5, 6, 0.94);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px;
+}
+
+.lightboxImg {
+  position: relative;
+  width: min(920px, 100%);
+  height: min(62dvh, 600px);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.lightImg {
+  object-fit: contain;
+}
+
+.lightboxCaption {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lightboxControls {
+  display: flex;
+  gap: 12px;
+}
+
+.lightboxControls button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.lightboxControls button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

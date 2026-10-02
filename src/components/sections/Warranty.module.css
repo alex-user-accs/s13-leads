@@ -1,0 +1,105 @@
+.section {
+  background-image: radial-gradient(700px 350px at 26% 60%, rgba(227, 210, 0, 0.06), transparent 70%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.text {
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.points {
+  list-style: none;
+}
+
+.points li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.check {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.shieldIco {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(227, 210, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.panelHead h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 8px 20px 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.chipLogo {
+  border-radius: 10px;
+}
+
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .chip {
+    width: 100%;
+    padding: 8px 10px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+}

@@ -1,0 +1,142 @@
+.section {
+  background-image: radial-gradient(700px 350px at 20% 22%, rgba(227, 210, 0, 0.06), transparent 70%);
+}
+
+.row {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 6px;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  scroll-snap-align: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardClickable {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease),
+    opacity 0.7s var(--ease);
+}
+
+@media (hover: hover) {
+  .cardClickable:hover {
+    border-color: rgba(227, 210, 0, 0.45);
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 17px;
+  color: #111;
+  flex-shrink: 0;
+}
+
+.avatarImg {
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+  color: var(--accent);
+  margin-top: 3px;
+}
+
+.stars svg {
+  width: 13px;
+  height: 13px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+}
+
+.card footer {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.dot:hover {
+  background: var(--grey);
+}
+
+.dotActive {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+.moreWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.moreLink {
+  margin-top: 24px;
+}
+
+@media (max-width: 899px) {
+  .card {
+    flex: 0 0 60%;
+  }
+}
+
+@media (max-width: 599px) {
+  .row {
+    margin: 0 calc(var(--pad-x) * -1);
+    padding-left: var(--pad-x);
+    padding-right: var(--pad-x);
+  }
+  .card {
+    flex: 0 0 82%;
+  }
+}
