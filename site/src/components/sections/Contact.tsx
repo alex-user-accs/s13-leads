@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { BUSINESS } from "@/lib/constants";
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { isValidUaPhone, LEAD_SERVICES } from "@/lib/lead";
 import { PhoneIcon, PinIcon, ClockIcon, InstagramIcon } from "@/components/ui/Icons";
 import styles from "./Contact.module.css";
 
@@ -25,10 +26,7 @@ export function Contact({ locale }: { locale: Locale }) {
 
     const nextErrors: typeof errors = {};
     if (name.length < 2) nextErrors.name = dict.contact.form.nameError;
-    const phoneDigits = phone.replace(/\D/g, "");
-    const isValidUaPhone =
-      /^380\d{9}$/.test(phoneDigits) || /^0\d{9}$/.test(phoneDigits);
-    if (!isValidUaPhone) nextErrors.phone = dict.contact.form.phoneError;
+    if (!isValidUaPhone(phone)) nextErrors.phone = dict.contact.form.phoneError;
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
@@ -136,9 +134,11 @@ export function Contact({ locale }: { locale: Locale }) {
               </label>
               <select id="lead-service" name="service" defaultValue="">
                 <option value="">{dict.contact.form.service}</option>
-                <option value="cleaning">{dict.services.groups.cleaning.title}</option>
-                <option value="polishing">{dict.services.groups.polishing.title}</option>
-                <option value="protection">{dict.services.groups.protection.title}</option>
+                {LEAD_SERVICES.map((id) => (
+                  <option key={id} value={id}>
+                    {dict.services.groups[id].title}
+                  </option>
+                ))}
               </select>
             </div>
             <input

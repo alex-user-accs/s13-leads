@@ -16,18 +16,22 @@ import { Reviews } from "./sections/Reviews";
 import { Faq } from "./sections/Faq";
 import { Contact } from "./sections/Contact";
 
+/** Escapes "<" so text like "</script>" in the data can't close the tag early. */
+function JsonLd({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+    />
+  );
+}
+
 export function Landing({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd(locale)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(locale)) }}
-      />
+      <JsonLd data={localBusinessJsonLd(locale)} />
+      <JsonLd data={faqJsonLd(locale)} />
       <Header locale={locale} />
       <main>
         <Hero locale={locale} />

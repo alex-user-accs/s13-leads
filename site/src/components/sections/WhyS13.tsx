@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { STATS } from "@/lib/constants";
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { prefersReducedMotion, useParallax } from "@/lib/motion";
 import styles from "./WhyS13.module.css";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
@@ -12,7 +13,7 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (prefersReducedMotion()) {
       setValue(target);
       return;
     }
@@ -49,30 +50,13 @@ export function WhyS13({ locale }: { locale: Locale }) {
   const bgRef = useRef<HTMLDivElement>(null);
   const wordRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const section = sectionRef.current;
-        if (section && bgRef.current && wordRef.current) {
-          const r = section.getBoundingClientRect();
-          const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-          const amp = innerWidth < 900 ? -150 : -330;
-          if (Math.abs(p) < 1.2) {
-            bgRef.current.style.transform = `translateY(${p * 80}px)`;
-            wordRef.current.style.transform = `translateY(calc(-50% + ${p * amp}px))`;
-          }
-        }
-        ticking = false;
-      });
-    };
-    addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => removeEventListener("scroll", onScroll);
-  }, []);
+  useParallax(sectionRef, (offset, isMobile) => {
+    const amp = isMobile ? -150 : -330;
+    if (bgRef.current && wordRef.current) {
+      bgRef.current.style.transform = `translateY(${offset * 80}px)`;
+      wordRef.current.style.transform = `translateY(calc(-50% + ${offset * amp}px))`;
+    }
+  });
 
   return (
     <section ref={sectionRef} className={styles.section} id="why">

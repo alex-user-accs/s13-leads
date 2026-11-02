@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { useParallax } from "@/lib/motion";
 import styles from "./BeforeAfter.module.css";
 
 export function BeforeAfter({ locale }: { locale: Locale }) {
@@ -13,29 +14,12 @@ export function BeforeAfter({ locale }: { locale: Locale }) {
   const dragging = useRef(false);
   const [pos, setPos] = useState(50);
 
-  useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const section = sectionRef.current;
-        if (section && wordRef.current) {
-          const r = section.getBoundingClientRect();
-          const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
-          const amp = innerWidth < 900 ? -110 : -220;
-          if (Math.abs(p) < 1.2) {
-            wordRef.current.style.transform = `translateY(calc(-50% + ${p * amp}px))`;
-          }
-        }
-        ticking = false;
-      });
-    };
-    addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => removeEventListener("scroll", onScroll);
-  }, []);
+  useParallax(sectionRef, (offset, isMobile) => {
+    const amp = isMobile ? -110 : -220;
+    if (wordRef.current) {
+      wordRef.current.style.transform = `translateY(calc(-50% + ${offset * amp}px))`;
+    }
+  });
 
   const moveTo = useCallback((clientX: number) => {
     const el = wrapRef.current;

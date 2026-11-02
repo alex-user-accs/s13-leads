@@ -1,5 +1,5 @@
-import { CARD_GROUP_IDS, SERVICE_GROUPS } from "@/lib/constants";
-import { getDictionary, type Locale } from "@/lib/i18n";
+import { CARD_GROUP_IDS, SERVICE_GROUPS, type ServiceItem } from "@/lib/constants";
+import { getDictionary, type Dictionary, type Locale } from "@/lib/i18n";
 import { CheckIcon, ChevronIcon, SprayIcon, SparkleIcon, ShieldIcon, CarIcon } from "@/components/ui/Icons";
 import styles from "./Services.module.css";
 
@@ -9,6 +9,17 @@ const groupIcons = {
   protection: ShieldIcon,
   extra: CarIcon,
 } as const;
+
+const fmt = (n: number) => n.toLocaleString("uk-UA");
+
+function formatPrice(item: ServiceItem, t: Dictionary["services"]): string {
+  if (item.negotiable) return t.negotiable;
+  if (!item.price) return "—";
+  if (item.priceMax) {
+    return `${t.from} ${fmt(item.price)} ${t.to} ${fmt(item.priceMax)} ${t.uah}`;
+  }
+  return `${item.from ? `${t.from} ` : ""}${fmt(item.price)} ${t.uah}`;
+}
 
 export function Services({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
@@ -47,7 +58,7 @@ export function Services({ locale }: { locale: Locale }) {
                 <div className={styles.price}>
                   {dict.services.from}{" "}
                   <b>
-                    {group.priceFrom.toLocaleString("uk-UA")} {dict.services.uah}
+                    {fmt(group.priceFrom)} {dict.services.uah}
                   </b>
                 </div>
                 <a href="#contact" className="btn btn-primary">
@@ -73,18 +84,7 @@ export function Services({ locale }: { locale: Locale }) {
                       <span>{items[item.id]}</span>
                       <span className={styles.dots} aria-hidden="true" />
                       <span className={styles.priceValue}>
-                        {item.negotiable ? (
-                          dict.services.negotiable
-                        ) : item.priceMax ? (
-                          `${dict.services.from} ${item.price!.toLocaleString("uk-UA")} ${dict.services.to} ${item.priceMax.toLocaleString("uk-UA")} ${dict.services.uah}`
-                        ) : (
-                          <>
-                            {item.from && `${dict.services.from} `}
-                            {item.price
-                              ? `${item.price.toLocaleString("uk-UA")} ${dict.services.uah}`
-                              : "—"}
-                          </>
-                        )}
+                        {formatPrice(item, dict.services)}
                       </span>
                     </li>
                   ))}

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BUSINESS } from "@/lib/constants";
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { prefersReducedMotion } from "@/lib/motion";
 import { GoogleIcon, StarIcon } from "@/components/ui/Icons";
 import styles from "./Reviews.module.css";
 
@@ -30,7 +31,7 @@ export function Reviews({ locale }: { locale: Locale }) {
   };
 
   useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (prefersReducedMotion()) return;
     const row = rowRef.current;
     if (!row) return;
 

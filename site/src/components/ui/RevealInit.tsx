@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
+import { prefersReducedMotion } from "@/lib/motion";
 
 /** Activates .reveal elements once they enter the viewport. */
 export function RevealInit() {
   useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (prefersReducedMotion()) {
       document.querySelectorAll(".reveal").forEach((el) => el.classList.add("on"));
       return;
     }
