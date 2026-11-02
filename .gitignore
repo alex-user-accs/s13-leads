@@ -1,10 +1,21 @@
+# Secrets — never commit (Telegram bot token etc.)
+.env
+.env.*
+!.env.example
+
+# Dependencies / build output
 node_modules/
 .next/
 out/
-.env*.local
-.vercel
 *.tsbuildinfo
 next-env.d.ts
-.DS_Store
 
+# Hosting links
 .vercel
+
+# Original camera files (RAW .CR2, ~170 MB) — keep outside git
+/photos/
+
+# OS / editor
+.DS_Store
+Thumbs.db
