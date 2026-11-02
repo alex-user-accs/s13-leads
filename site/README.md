@@ -13,8 +13,8 @@ npm run build      # production check
 
 ## Deploy to Vercel
 
-1. Push `site/` to a GitHub repo (repo root = this folder).
-2. vercel.com → Add New Project → import the repo. Framework auto-detected.
+1. Push the project to a private GitHub repo (git root = the folder above `site/`).
+2. vercel.com → Add New Project → import the repo → set **Root Directory** to `site`. Framework auto-detected.
 3. Set env variables (Settings → Environment Variables):
 
 | Variable | Value |
