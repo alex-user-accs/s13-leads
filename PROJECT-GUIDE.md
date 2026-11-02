@@ -15,7 +15,7 @@ A one-page landing site for S13 Detailing Studio (Vinnytsia), Ukrainian at `/` a
 | Pages | Static, built ahead of time |
 | Server part | One API route, `POST /api/lead`, which sends callback-form leads to the owner on Telegram |
 | Content | `site/src/dictionaries/uk.json`, `en.json`; prices and stats in `site/src/lib/constants.ts` |
-| Spec | `SPEC.md` (design/feature spec), `site/README.md` (short dev notes) |
+| Spec | `docs/SPEC.md` (design/feature spec), `site/README.md` (short dev notes) |
 
 Folder layout:
 
@@ -23,14 +23,21 @@ Folder layout:
 S13 Detailng Studio/        ← git root
 ├─ site/                    ← the Next.js app (everything that gets deployed)
 │  ├─ src/                  ← code and text
-│  ├─ public/               ← images served by the site
+│  ├─ public/               ← optimized images the site actually serves
 │  ├─ .env.example          ← list of required variables (no values)
 │  └─ .env.local            ← REAL secrets, local only, ignored by git
-├─ photos/                  ← RAW camera originals (~170 MB), ignored by git
-├─ *.jpg / *.png / *.webp   ← source design assets and logos
-├─ SPEC.md, project-brief.md
+├─ assets/                  ← original source files, NOT used by the build
+│  ├─ logos/                ← S13 logo variants
+│  ├─ brands/               ← material brand logos
+│  ├─ avatars/              ← reviewer photos
+│  ├─ photos/               ← work and studio photos
+│  ├─ placeholders/         ← old placeholder images
+│  └─ raw/                  ← RAW camera originals (~170 MB), ignored by git
+├─ docs/                    ← SPEC.md, project-brief.md, design-preview.html
 └─ PROJECT-GUIDE.md         ← this file
 ```
+
+To put a new image on the site, export an optimized copy (WebP/JPG, ≤ ~300 KB) from `assets/` into `site/public/` and keep the original in `assets/`. Anything inside `site/public/` is uploaded to the host and can be downloaded by anyone.
 
 Because the site has an API route, it needs a host that runs Node.js. It cannot be uploaded as plain HTML files.
 
@@ -159,7 +166,7 @@ Checked and fine: there is no user input rendered as HTML (the JSON-LD is built 
 | `/`, `/en`, `/robots.txt`, `/sitemap.xml`, images, image optimizer | All HTTP 200 |
 | Form API: valid lead → 200, invalid phone → 400 | Pass |
 | Telegram delivery | Tested locally by the developer with the customer's bot (@s13_cust_bot) on 2026-11-03. Test once more on the hosted site. |
-| Visual / mobile layout, Lighthouse | Not re-checked this time. Run the QA checklist in `SPEC.md` §12 on the hosted URL. |
+| Visual / mobile layout, Lighthouse | Not re-checked this time. Run the QA checklist in `docs/SPEC.md` §12 on the hosted URL. |
 
 ---
 
@@ -192,7 +199,7 @@ Checked and fine: there is no user input rendered as HTML (the JSON-LD is built 
 
 The repository is at the project root on branch `master`. The site's original history is kept under `site/`.
 
-Ignored by git (`.gitignore`): all `.env*` files except `.env.example`, `node_modules/`, `.next/`, `.vercel`, and `/photos/` (RAW originals). Back up `photos/` separately, for example to cloud storage.
+Ignored by git (`.gitignore`): all `.env*` files except `.env.example`, `node_modules/`, `.next/`, `.vercel`, and `assets/raw/` (RAW originals). Back up `assets/raw/` separately, for example to cloud storage.
 
 To publish to GitHub as a **private** repo:
 

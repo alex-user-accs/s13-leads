@@ -14,7 +14,7 @@ next-env.d.ts
 .vercel
 
 # Original camera files (RAW .CR2, ~170 MB) — keep outside git
-/photos/
+/assets/raw/
 
 # OS / editor
 .DS_Store

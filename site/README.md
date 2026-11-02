@@ -1,6 +1,6 @@
 # S13 Detailing Studio — Landing Page
 
-Next.js 15 landing page. Ukrainian (`/`) + English (`/en`). Spec: `../SPEC.md`.
+Next.js 15 landing page. Ukrainian (`/`) + English (`/en`). Spec: `../docs/SPEC.md`.
 
 ## Run locally
 
