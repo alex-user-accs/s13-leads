@@ -6,7 +6,7 @@ export const BUSINESS = {
     street: "вул. Данила Нечая, 224а",
     city: "Вінниця",
     region: "Вінницька область",
-    zip: "21000",
+    zip: "21012",
     country: "UA",
   },
   /** Must match the Google Business Profile pin (googleMaps link below). */

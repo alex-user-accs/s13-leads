@@ -81,7 +81,7 @@ This is where most of the local ranking comes from. In order of impact:
    - Write a description that names the services and Vinnytsia.
    - Upload new real work photos regularly (e.g. weekly); post short updates and before/after photos.
    - Check the Q&A and any AI-generated fields on the profile, and correct anything wrong.
-   - **The name, address and phone must match the site exactly.** The site uses "вул. Данила Нечая, 224а", postcode **21000**. OpenStreetMap places this street in **21012**, so confirm the postcode with the owner and use the same one everywhere.
+   - **The name, address and phone must match the site exactly:** "вул. Данила Нечая, 224а, Вінниця, **21012**". The site used the generic city postcode 21000 until 2026-11-03; set 21012 on the profile and every listing too.
 2. **Reviews**
    - Ask every happy client for a Google review, using a short link or QR code at handover.
    - Reply to every review. Reviews that mention the service and the city ("хімчистка салону у Вінниці") help most.
