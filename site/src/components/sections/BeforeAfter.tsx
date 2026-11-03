@@ -68,7 +68,7 @@ export function BeforeAfter({ locale }: { locale: Locale }) {
           <div className={`${styles.side} ${styles.before}`}>
             <Image
               src="/photos/before.jpg"
-              alt={dict.beforeAfter.before}
+              alt={dict.beforeAfter.beforeAlt}
               fill
               sizes="(max-width: 899px) 100vw, 1180px"
               className={styles.img}
@@ -80,7 +80,7 @@ export function BeforeAfter({ locale }: { locale: Locale }) {
           >
             <Image
               src="/photos/after.jpg"
-              alt={dict.beforeAfter.after}
+              alt={dict.beforeAfter.afterAlt}
               fill
               sizes="(max-width: 899px) 100vw, 1180px"
               className={styles.img}

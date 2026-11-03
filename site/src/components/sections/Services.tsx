@@ -1,5 +1,6 @@
 import { CARD_GROUP_IDS, SERVICE_GROUPS, type ServiceItem } from "@/lib/constants";
 import { getDictionary, type Dictionary, type Locale } from "@/lib/i18n";
+import { fmt } from "@/lib/prices";
 import { CheckIcon, ChevronIcon, SprayIcon, SparkleIcon, ShieldIcon, CarIcon } from "@/components/ui/Icons";
 import styles from "./Services.module.css";
 
@@ -9,8 +10,6 @@ const groupIcons = {
   protection: ShieldIcon,
   extra: CarIcon,
 } as const;
-
-const fmt = (n: number) => n.toLocaleString("uk-UA");
 
 function formatPrice(item: ServiceItem, t: Dictionary["services"]): string {
   if (item.negotiable) return t.negotiable;

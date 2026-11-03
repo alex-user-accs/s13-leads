@@ -9,7 +9,8 @@ export const BUSINESS = {
     zip: "21000",
     country: "UA",
   },
-  geo: { lat: 49.2328, lng: 28.4682 },
+  /** Must match the Google Business Profile pin (googleMaps link below). */
+  geo: { lat: 49.2045062, lng: 28.4953615 },
   hours: { days: "Mo-Sa", open: "09:00", close: "18:00" },
   instagram: "https://www.instagram.com/s13.detailing.vn/",
   instagramHandle: "@s13.detailing.vn",

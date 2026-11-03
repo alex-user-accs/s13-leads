@@ -1,6 +1,6 @@
 import { BUSINESS } from "@/lib/constants";
 import { getDictionary, type Locale } from "@/lib/i18n";
-import { faqJsonLd, localBusinessJsonLd } from "@/lib/seo";
+import { jsonLdGraph } from "@/lib/seo";
 import { Header } from "./layout/Header";
 import { Footer } from "./layout/Footer";
 import { MobileCallBar } from "./layout/MobileCallBar";
@@ -30,8 +30,7 @@ export function Landing({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   return (
     <>
-      <JsonLd data={localBusinessJsonLd(locale)} />
-      <JsonLd data={faqJsonLd(locale)} />
+      <JsonLd data={jsonLdGraph(locale)} />
       <Header locale={locale} />
       <main>
         <Hero locale={locale} />

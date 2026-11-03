@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "S13 — Car Detailing in Vinnytsia: Cleaning, Polishing, Ceramic",
-    "description": "S13 Detailing Studio in Vinnytsia: interior deep cleaning, paint polishing, ceramic protection. Fair prices, professional materials, warranty on all work. ☎ +38 (063) 806 50 56"
+    "title": "Car Detailing in Vinnytsia: Interior Cleaning, Polishing, Ceramic | S13",
+    "description": "Interior deep cleaning, paint and headlight polishing, ceramic coating in Vinnytsia. Prices from {minPrice} UAH, warranty, before/after photos. ☎ +38 (063) 806 50 56"
   },
   "nav": {
     "services": "Services",
@@ -11,10 +11,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Detailing studio in Vinnytsia",
-    "h1a": "Your car deserves that",
-    "h1b": "showroom look",
-    "sub": "Interior deep cleaning, paint polishing and ceramic protection. Fair prices, professional materials, warranty on all work.",
+    "badge": "Vinnytsia, 224a Danyla Nechaia St.",
+    "h1a": "Car detailing in Vinnytsia —",
+    "h1b": "that showroom look",
+    "sub": "Interior deep cleaning, paint and headlight polishing, ceramic coating and rain repellent. Fair prices, professional materials, warranty on all work.",
     "ctaCall": "Call us",
     "ctaForm": "Get a quote",
     "statCars": "cars detailed",
@@ -24,8 +24,8 @@
   },
   "services": {
     "label": "Services",
-    "title": "Three directions. One result — a flawless car",
-    "sub": "Every service includes the full work cycle. Expand the full price list to see all 22 items.",
+    "title": "Detailing services and prices",
+    "sub": "Interior cleaning, polishing and paint protection — each with the full work cycle. Expand the full price list to see prices for all 22 services.",
     "from": "from",
     "to": "to",
     "uah": "UAH",
@@ -77,10 +77,12 @@
   },
   "beforeAfter": {
     "label": "Before / After",
-    "title": "Results you can see instantly",
+    "title": "Interior cleaning: before and after",
     "sub": "Drag the slider to compare the state before and after our work.",
     "before": "BEFORE",
     "after": "AFTER",
+    "beforeAlt": "Driver's footwell carpet before interior cleaning — sand and dirt",
+    "afterAlt": "The same carpet after interior cleaning at S13 studio",
     "sliderAria": "Before and after photo comparison, drag or use arrow keys"
   },
   "process": {
@@ -128,7 +130,7 @@
   },
   "reviews": {
     "label": "Reviews",
-    "title": "What clients say",
+    "title": "What clients say about S13",
     "sub": "Reviews from Google Maps and Instagram.",
     "googleLink": "All reviews on Google",
     "items": [
@@ -142,17 +144,21 @@
     "label": "FAQ",
     "title": "Frequently asked questions",
     "items": [
+      { "q": "How much does interior cleaning cost in Vinnytsia?", "a": "Interior cleaning without disassembly — {price:cleaning-basic} UAH, with disassembly — from {price:cleaning-full} UAH, light cleaning — {price:light-cleaning} UAH. Cleaning individual seats — from {price:seat-cleaning} UAH. The exact price is fixed after inspecting the car." },
+      { "q": "How much does car polishing cost?", "a": "1-step paint polishing — from {price:polish-1step} UAH, 3-step — from {price:polish-3step} UAH, deep polishing — from {price:polish-deep} UAH. Headlight polishing — {price:headlights-polish} UAH, headlight sanding — {price:headlights-grind} UAH." },
       { "q": "How long does interior cleaning take?", "a": "Without disassembly — 1 day depending on condition. With disassembly — up to 2 days including full drying." },
       { "q": "Do I need to book in advance?", "a": "Yes, usually 1–2 days ahead. Call us and we'll find a convenient slot. You can also fill in the form and we'll call you back ourselves." },
       { "q": "What does the price depend on?", "a": "On the car's configuration and condition. We give the exact price after an initial inspection at the studio — it's fixed before work starts and never changes." },
       { "q": "How long does ceramic coating last?", "a": "With proper care, a ceramic coating can last around 2 years or more. Once the service is complete, we provide recommendations on aftercare and help you choose the right chemistry for maintaining your car after the ceramic coating is applied." },
       { "q": "What percentage of scratches does polishing remove?", "a": "1-step — up to 50%, 3-step — up to 80%, deep rotary polishing — 90% and more. We'll be able to give an exact estimate after inspecting the paintwork." },
-      { "q": "Can I leave the car for the whole day?", "a": "Yes, we can arrange drop-off and pick-up at a time that suits you. Our studio is open Monday to Saturday, 09:00–18:00." }
+      { "q": "Can I leave the car for the whole day?", "a": "Yes, we can arrange drop-off and pick-up at a time that suits you. Our studio is open Monday to Saturday, 09:00–18:00." },
+      { "q": "Can you pick up the car and bring it back?", "a": "Yes, we can pick up your car and bring it back after the work. The price is agreed individually and depends on the address." },
+      { "q": "Where is the S13 studio?", "a": "S13 Detailing Studio is in Vinnytsia at 224a Danyla Nechaia St. We're open Monday to Saturday, 09:00–18:00, closed on Sundays." }
     ]
   },
   "contact": {
     "label": "Contact",
-    "title": "Book a detailing",
+    "title": "Book a detailing in Vinnytsia",
     "sub": "Call us or leave your number — we'll call back within 15 minutes during working hours.",
     "addressLabel": "Address",
     "hoursLabel": "Hours",

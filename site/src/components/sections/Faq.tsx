@@ -1,4 +1,5 @@
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { fillPrices } from "@/lib/prices";
 import { ChevronIcon } from "@/components/ui/Icons";
 import styles from "./Faq.module.css";
 
@@ -16,7 +17,7 @@ export function Faq({ locale }: { locale: Locale }) {
                 {item.q}
                 <ChevronIcon className={styles.chevron} />
               </summary>
-              <p>{item.a}</p>
+              <p>{fillPrices(item.a)}</p>
             </details>
           ))}
         </div>
