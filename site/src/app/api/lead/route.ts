@@ -29,7 +29,10 @@ function isRateLimited(ip: string): boolean {
 const str = (value: unknown) => (typeof value === "string" ? value.trim() : "");
 
 export async function POST(request: Request) {
-  const ip = request.headers.get("x-forwarded-for")?.split(",")[0].trim() || "unknown";
+  const ip =
+    request.headers.get("cf-connecting-ip") ||
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+    "unknown";
   if (isRateLimited(ip)) {
     return NextResponse.json({ ok: false }, { status: 429 });
   }
